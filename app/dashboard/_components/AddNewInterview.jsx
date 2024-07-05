@@ -93,55 +93,57 @@ function AddNewInterview() {
             </DialogTitle>
           </DialogHeader>
           <DialogDescription>
-            <form onSubmit={onSubmit}>
+            <div>
               <div>
-                <p>
-                  Add details about your job position/role, job description, and
-                  years of experience
-                </p>
-                <div className="mt-7 my-3">
-                  <label>Job Role/Job Position</label>
-                  <Input
-                    placeholder="Ex. Full Stack Developer "
-                    required
-                    onChange={(e) => setJobPosition(e.target.value)}
-                  />
-                </div>
-                <div className="my-3">
-                  <label>Job Description/Tech Stack (In short)</label>
-                  <Textarea
-                    placeholder="Ex. React, Angular, NodeJs, MySql etc."
-                    required
-                    onChange={(e) => setJobDescription(e.target.value)}
-                  />
-                </div>
-                <div className="my-3">
-                  <label>Years of Experience</label>
-                  <Input
-                    placeholder="Ex. 5"
-                    type="number"
-                    min="0"
-                    max="70"
-                    required
-                    onChange={(e) => setJobExperience(e.target.value)}
-                  />
-                </div>
+                Add details about your job position/role, job description, and
+                years of experience
               </div>
-              <div className="flex gap-5 justify-end">
-                <Button type="button" variant="ghost" onClick={() => setOpenDialog(false)}>
-                  Cancel
-                </Button>
-                <Button type="submit" disabled={loading}>
-                  {loading ? (
-                    <>
-                      <LoaderCircle className="animate-spin" /> Generating from AI
-                    </>
-                  ) : (
-                    'Start Interview'
-                  )}
-                </Button>
-              </div>
-            </form>
+              <form onSubmit={onSubmit}>
+                <div>
+                  <div className="mt-7 my-3">
+                    <label>Job Role/Job Position</label>
+                    <Input
+                      placeholder="Ex. Full Stack Developer "
+                      required
+                      onChange={(e) => setJobPosition(e.target.value)}
+                    />
+                  </div>
+                  <div className="my-3">
+                    <label>Job Description/Tech Stack (In short)</label>
+                    <Textarea
+                      placeholder="Ex. React, Angular, NodeJs, MySql etc."
+                      required
+                      onChange={(e) => setJobDescription(e.target.value)}
+                    />
+                  </div>
+                  <div className="my-3">
+                    <label>Years of Experience</label>
+                    <Input
+                      placeholder="Ex. 5"
+                      type="number"
+                      min="0"
+                      max="70"
+                      required
+                      onChange={(e) => setJobExperience(e.target.value)}
+                    />
+                  </div>
+                </div>
+                <div className="flex gap-5 justify-end">
+                  <Button type="button" variant="ghost" onClick={() => setOpenDialog(false)}>
+                    Cancel
+                  </Button>
+                  <Button type="submit" disabled={loading}>
+                    {loading ? (
+                      <>
+                        <LoaderCircle className="animate-spin" /> Generating from AI
+                      </>
+                    ) : (
+                      'Start Interview'
+                    )}
+                  </Button>
+                </div>
+              </form>
+            </div>
           </DialogDescription>
         </DialogContent>
       </Dialog>

@@ -49,3 +49,4 @@ export const UserAnswer = pgTable('userAnswer',{
     userEmail:varchar('userEmail'),
     createdAt:varchar('createdAt'),
 })
+

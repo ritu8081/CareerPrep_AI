@@ -9,7 +9,7 @@ function DashboardLayout({ children }) {
       <div className="mx-5 md:mx-20 lg:,mx:36">{children}</div>
 
 
-      <footer class="bg-gray-800 text-white flex flex-col items-center justify-between gap-2 py-4 px-4 md:flex-row md:justify-around md:items-stretch md:py-8 md:px-8">
+      <footer className="bg-gray-800 text-white flex flex-col items-center justify-between gap-2 py-4 px-4 md:flex-row md:justify-around md:items-stretch md:py-8 md:px-8">
       <Image src={'/footerlogo.png'}width={120} height={70} alt='logo' className='flex justify-start ml-14 mt-3 mb-2'></Image>
         
 

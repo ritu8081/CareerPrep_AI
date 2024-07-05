@@ -11,7 +11,7 @@ export const Header = () => {
     })
   return (
     <div className='flex p-4 items-center justify-between text-white bg-gray-800'>
-        <Image src={'/newlogo.png'}width={120} height={70} alt='logo' className='flex justify-start ml-10'></Image>
+        <Image src={'/logo.svg'}width={120} height={70} alt='logo' className='flex justify-start ml-10'></Image>
         <ul className='hidden md:flex gap-6'>
             <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard' && 'text-primary font-bold'}`}>Dashboard</li>
             <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer ${path=='/dashboard/questions' && 'text-primary font-bold'}`}>Questions</li>
